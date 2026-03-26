@@ -1,20 +1,25 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Artwork } from "@/lib/types";
 
 export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
+  const imageSrc = `/artwork/${artwork.images[0]}`;
+
   return (
     <Link href={`/shop/${artwork.slug}`} className="group block">
-      {/* Image placeholder - replace with next/image when real images are added */}
-      <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center text-muted text-sm">
-          {artwork.title}
-        </div>
+      <div className="aspect-square bg-gray-100 relative overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={artwork.title}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.5]"
+        />
         {artwork.sold && (
-          <div className="absolute top-3 left-3 bg-foreground text-white text-xs uppercase tracking-wider px-3 py-1">
+          <div className="absolute top-3 left-3 z-10 bg-foreground text-white text-xs uppercase tracking-wider px-3 py-1">
             Sold
           </div>
         )}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
       </div>
 
       <div className="mt-3 space-y-1">

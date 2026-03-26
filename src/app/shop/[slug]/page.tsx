@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import artworkData from "@/data/artwork.json";
 import type { Artwork } from "@/lib/types";
@@ -50,8 +51,15 @@ export default async function ArtworkPage({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Image */}
-        <div className="aspect-[4/5] bg-gray-100 flex items-center justify-center text-muted text-sm">
-          {artwork.title}
+        <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
+          <Image
+            src={`/artwork/${artwork.images[0]}`}
+            alt={artwork.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+            priority
+          />
         </div>
 
         {/* Details */}
