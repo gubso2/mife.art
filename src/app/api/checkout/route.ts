@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { stripe } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
 import artworkData from "@/data/artwork.json";
 import type { Artwork } from "@/lib/types";
 
@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.redirect(new URL("/shop", req.url));
     }
 
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
         {
