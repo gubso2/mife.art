@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "ethereal-bloom",
+    "title": "Ethereal Bloom",
+    "medium": "Acrylic on canvas",
+    "dimensions": "80 x 100 cm",
+    "year": 2025,
+    "price": 1800,
+    "currency": "AUD",
+    "sold": false,
+    "featured": true,
+    "images": ["ethereal-bloom.jpg"],
+    "description": "A luminous exploration of colour and movement, this piece captures the fleeting beauty of nature in transition."
+  },
+  {
+    "slug": "midnight-current",
+    "title": "Midnight Current",
+    "medium": "Oil on canvas",
+    "dimensions": "60 x 90 cm",
+    "year": 2025,
+    "price": 2200,
+    "currency": "AUD",
+    "sold": false,
+    "featured": true,
+    "images": ["midnight-current.jpg"],
+    "description": "Deep indigos and flowing forms evoke the quiet power of water under moonlight."
+  },
+  {
+    "slug": "golden-passage",
+    "title": "Golden Passage",
+    "medium": "Mixed media on canvas",
+    "dimensions": "100 x 120 cm",
+    "year": 2024,
+    "price": 2800,
+    "currency": "AUD",
+    "sold": false,
+    "featured": true,
+    "images": ["golden-passage.jpg"],
+    "description": "Rich golds and earthy tones create a sense of warmth and journey through layered textures."
+  },
+  {
+    "slug": "still-waters",
+    "title": "Still Waters",
+    "medium": "Acrylic on canvas",
+    "dimensions": "50 x 70 cm",
+    "year": 2024,
+    "price": 1200,
+    "currency": "AUD",
+    "sold": true,
+    "featured": false,
+    "images": ["still-waters.jpg"],
+    "description": "Soft blues and gentle brushwork reflect the calm of a still morning."
+  },
+  {
+    "slug": "ember-and-ash",
+    "title": "Ember & Ash",
+    "medium": "Oil on canvas",
+    "dimensions": "70 x 90 cm",
+    "year": 2025,
+    "price": 1950,
+    "currency": "AUD",
+    "sold": false,
+    "featured": true,
+    "images": ["ember-and-ash.jpg"],
+    "description": "Fiery oranges and smoky greys collide in this dynamic abstract piece."
+  },
+  {
+    "slug": "soft-terrain",
+    "title": "Soft Terrain",
+    "medium": "Acrylic on canvas",
+    "dimensions": "90 x 90 cm",
+    "year": 2024,
+    "price": 1600,
+    "currency": "AUD",
+    "sold": false,
+    "featured": false,
+    "images": ["soft-terrain.jpg"],
+    "description": "Muted pastels and organic shapes suggest a landscape seen through the haze of memory."
+  }
+]
