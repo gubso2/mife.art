@@ -47,7 +47,7 @@ export default function Footer() {
               Connect
             </h4>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/mife_art/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors"

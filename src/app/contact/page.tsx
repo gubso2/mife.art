@@ -38,12 +38,12 @@ export default function ContactPage() {
             <div>
               <h3 className="text-xs uppercase tracking-wider font-semibold mb-2">Instagram</h3>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/mife_art/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted hover:text-foreground transition-colors"
               >
-                @mife.art
+                @mife_art
               </a>
             </div>
 
