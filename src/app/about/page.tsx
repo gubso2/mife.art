@@ -23,26 +23,19 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-muted leading-relaxed">
             <p>
-              Marina Ensor is an Australian artist working primarily with acrylics, oils, and
-              mixed media on canvas. Her work explores the interplay of colour, texture, and
-              emotion — each piece a reflection of an inner landscape.
+              From Southern Africa to Bendigo and now the leafy hills of Warrandyte,
+              Marina&apos;s art reflects a joyful exploration of the natural world, particularly
+              the vivid tones and forms found in flowers and plant life.
             </p>
 
             <p>
-              Drawing inspiration from nature, light, and the subtle shifts of the Australian
-              environment, Marina creates works that invite viewers to slow down and connect
-              with something deeper.
+              Marina&apos;s style is characterised by her strong use of colour and willingness
+              to explore bold combinations, creating works that feel energetic and expressive.
             </p>
 
             <p>
-              Every painting is an original — a one-of-a-kind piece created with intention and
-              care. Marina believes art should be felt as much as seen, and aims to create work
-              that resonates on a personal level with each collector.
-            </p>
-
-            <p>
-              When not in the studio, Marina can be found exploring the coastline, gathering
-              inspiration for her next series.
+              Beyond her art, Marina is a dedicated educator and enjoys spending time with
+              her loving family (including an overly-energetic furry friend, Douglas).
             </p>
           </div>
 

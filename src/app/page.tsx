@@ -37,9 +37,9 @@ export default function Home() {
               About the Artist
             </h2>
             <p className="text-muted leading-relaxed mb-6">
-              Marina Ensor is an Australian artist creating original works that explore colour,
-              texture, and emotion. Each piece is a unique expression — an invitation to pause
-              and feel.
+              From Southern Africa to the leafy hills of Warrandyte, Marina&apos;s art reflects
+              a joyful exploration of the natural world — vivid tones, bold colour combinations,
+              and energetic, expressive works inspired by flowers and plant life.
             </p>
             <Link
               href="/about"
