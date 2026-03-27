@@ -21,7 +21,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/mife logo final.png"
+            src="/mife-logo.png"
             alt="Mifé Art"
             width={150}
             height={75}
