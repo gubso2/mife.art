@@ -30,26 +30,36 @@ export default function Home() {
         <ArtworkGrid artworks={featured} />
       </section>
 
-      {/* About Teaser */}
-      <section className="bg-gray-50">
+      {/* About the Artist */}
+      <section id="about" className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
             <h2 className="text-xl md:text-2xl font-semibold uppercase tracking-wider mb-6">
               About the Artist
             </h2>
-            <p className="text-muted leading-relaxed mb-6">
-              From Southern Africa to the leafy hills of Warrandyte, Marina&apos;s art reflects
-              a joyful exploration of the natural world — vivid tones, bold colour combinations,
-              and energetic, expressive works inspired by flowers and plant life.
-            </p>
+            <div className="space-y-5 text-muted leading-relaxed mb-8">
+              <p>
+                From Southern Africa to Bendigo and now the leafy hills of Warrandyte,
+                Marina&apos;s art reflects a joyful exploration of the natural world, particularly
+                the vivid tones and forms found in flowers and plant life.
+              </p>
+              <p>
+                Marina&apos;s style is characterised by her strong use of colour and willingness
+                to explore bold combinations, creating works that feel energetic and expressive.
+              </p>
+              <p>
+                Beyond her art, Marina is a dedicated educator and enjoys spending time with
+                her loving family (including an overly-energetic furry friend, Douglas).
+              </p>
+            </div>
             <Link
-              href="/about"
-              className="inline-block text-sm uppercase tracking-wider border-b border-foreground pb-1 hover:text-muted transition-colors"
+              href="/contact"
+              className="inline-block bg-foreground text-white text-sm uppercase tracking-wider px-8 py-3 hover:bg-foreground/90 transition-colors"
             >
-              Learn More
+              Get in Touch
             </Link>
           </div>
-          <div className="flex-1 w-full relative">
+          <div className="w-full max-w-xs mx-auto relative">
             <div className="absolute -inset-3 bg-gradient-to-br from-pink-200 via-amber-100 to-teal-200 rounded-[1.5rem] rotate-1 opacity-60" />
             <div className="relative aspect-[3/4] overflow-hidden rounded-[1rem] rotate-[-0.5deg] shadow-lg">
               <Image

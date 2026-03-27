@@ -7,7 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
-  { href: "/about", label: "About" },
+  { href: "/#about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -22,9 +22,9 @@ export default function Header() {
           <Image
             src="/mife logo.png"
             alt="Mifé Art"
-            width={60}
-            height={60}
-            className="h-12 w-auto"
+            width={120}
+            height={120}
+            className="h-24 w-auto"
             priority
           />
         </Link>
