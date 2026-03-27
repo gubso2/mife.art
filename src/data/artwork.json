@@ -178,6 +178,7 @@
     "sold": false,
     "featured": true,
     "images": ["13 far.jpg"],
+    "closeImage": "13 close.jpg",
     "description": "Bold white daisies bloom against a warm sunset palette of pinks, oranges and deep blues, with flowing pink tendrils connecting the composition."
   },
   {
