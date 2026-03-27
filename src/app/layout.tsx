@@ -11,8 +11,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mife — Marina Ensor",
-    template: "%s | Mife",
+    default: "Art by Marina Ensor",
+    template: "%s | Art by Marina Ensor",
   },
   description: "Original artwork by Marina Ensor. Browse and purchase unique paintings and mixed media pieces.",
 };
