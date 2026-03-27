@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -18,8 +19,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-widest uppercase text-foreground">
-          Mifé Art
+        <Link href="/">
+          <Image
+            src="/mife logo final.png"
+            alt="Mifé Art"
+            width={150}
+            height={75}
+            className="h-14 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
