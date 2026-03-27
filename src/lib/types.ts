@@ -9,5 +9,6 @@ export interface Artwork {
   sold: boolean;
   featured: boolean;
   images: string[];
+  closeImage?: string;
   description: string;
 }
