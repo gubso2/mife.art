@@ -51,7 +51,11 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
         </div>
       </Link>
 
-      {!artwork.sold && artwork.price > 0 && (
+      {artwork.sold ? (
+        <div className="mt-3 w-full bg-gray-200 text-muted text-xs uppercase tracking-wider px-4 py-2.5 text-center">
+          Sold
+        </div>
+      ) : artwork.price > 0 ? (
         <form action="/api/checkout" method="POST" className="mt-3">
           <input type="hidden" name="slug" value={artwork.slug} />
           <button
@@ -61,7 +65,7 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
             Purchase — ${artwork.price.toLocaleString()}
           </button>
         </form>
-      )}
+      ) : null}
     </div>
   );
 }
