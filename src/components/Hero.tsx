@@ -1,12 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 py-24 md:py-36 flex flex-col items-center text-center">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight uppercase">
-          Mife
-        </h1>
+        <Image
+          src="/mife-logo.png"
+          alt="Mifé Art"
+          width={400}
+          height={260}
+          className="h-32 md:h-48 w-auto"
+          priority
+        />
         <p className="mt-4 text-lg md:text-xl text-muted max-w-xl">
           Original artwork by Marina Ensor
         </p>

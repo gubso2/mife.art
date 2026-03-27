@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,9 +8,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-lg font-bold tracking-widest uppercase mb-4">
-              Mife
-            </h3>
+            <Link href="/">
+              <Image
+                src="/mife-logo.png"
+                alt="Mifé Art"
+                width={150}
+                height={100}
+                className="h-20 w-auto mb-4"
+              />
+            </Link>
             <p className="text-sm text-muted leading-relaxed">
               Original artwork by Marina Ensor.
               <br />
