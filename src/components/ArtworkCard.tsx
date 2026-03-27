@@ -67,19 +67,45 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
           )}
         </div>
 
-        <div className="mt-3 space-y-1">
-          <h3 className="text-sm font-medium group-hover:underline">{artwork.title}</h3>
-          <p className="text-xs text-muted">{artwork.medium}</p>
-          {artwork.dimensions && <p className="text-xs text-muted">{artwork.dimensions}</p>}
-          {artwork.price > 0 && (
-            <p className="text-sm font-medium mt-1">
-              {artwork.sold ? (
-                <span className="text-muted">Sold</span>
-              ) : (
-                `$${artwork.price.toLocaleString()} ${artwork.currency}`
-              )}
-            </p>
-          )}
+        <div className="mt-3 flex gap-3">
+          {/* Thumbnails */}
+          <div className="flex flex-col gap-1.5 shrink-0">
+            <div className="w-10 h-10 relative overflow-hidden bg-gray-100 border border-border">
+              <Image
+                src={farSrc}
+                alt="Room view"
+                fill
+                sizes="40px"
+                className="object-cover"
+              />
+            </div>
+            {closeSrc && (
+              <div className="w-10 h-10 relative overflow-hidden bg-gray-100 border border-border">
+                <Image
+                  src={closeSrc}
+                  alt="Detail view"
+                  fill
+                  sizes="40px"
+                  className="object-cover"
+                />
+              </div>
+            )}
+          </div>
+          {/* Info */}
+          <div className="space-y-1 min-w-0">
+            <h3 className="text-sm font-medium group-hover:underline">{artwork.title}</h3>
+            <p className="text-xs text-muted">{artwork.medium}</p>
+            {artwork.dimensions && <p className="text-xs text-muted">{artwork.dimensions}</p>}
+            {artwork.price > 0 && (
+              <p className="text-sm font-medium mt-1">
+                {artwork.sold ? (
+                  <span className="text-muted">Sold</span>
+                ) : (
+                  `$${artwork.price.toLocaleString()} ${artwork.currency}`
+                )}
+              </p>
+            )}
+          </div>
         </div>
       </Link>
 
