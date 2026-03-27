@@ -21,14 +21,14 @@ export default function GalleryPage() {
   const images = getGalleryImages();
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-      <h1 className="text-2xl md:text-3xl font-semibold uppercase tracking-wider mb-10">
+    <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-20">
+      <h1 className="text-xl md:text-3xl font-semibold uppercase tracking-wider mb-6 md:mb-10">
         Gallery
       </h1>
 
       {/* Exhibition Feature */}
-      <div className="mb-16">
-        <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
+      <div className="mb-10 md:mb-16">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-6 md:mb-8">
           <div className="flex-1">
             <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
               <Image

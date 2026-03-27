@@ -15,20 +15,20 @@ export default function Home() {
       <Hero />
 
       {/* Featured Work */}
-      <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
-        <div className="flex items-center justify-between mb-10">
-          <h2 className="text-xl md:text-2xl font-semibold uppercase tracking-wider">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-24">
+        <div className="flex items-center justify-between mb-6 md:mb-10">
+          <h2 className="text-lg md:text-2xl font-semibold uppercase tracking-wider">
             Featured
           </h2>
           <Link
             href="/shop"
-            className="bg-foreground text-white text-sm uppercase tracking-wider px-6 py-2.5 hover:bg-foreground/90 transition-colors"
+            className="bg-foreground text-white text-xs md:text-sm uppercase tracking-wider px-4 md:px-6 py-2 md:py-2.5 hover:bg-foreground/90 transition-colors"
           >
             View All
           </Link>
         </div>
         <ArtworkGrid artworks={featured.slice(0, 6)} />
-        <div className="mt-12 text-center">
+        <div className="mt-8 md:mt-12 text-center">
           <Link
             href="/shop"
             className="inline-block bg-foreground text-white text-sm uppercase tracking-wider px-8 py-3 hover:bg-foreground/90 transition-colors"
@@ -40,7 +40,7 @@ export default function Home() {
 
       {/* About the Artist */}
       <section id="about" className="bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-24 flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex-1">
             <h2 className="text-xl md:text-2xl font-semibold uppercase tracking-wider mb-6">
               About the Artist
@@ -60,16 +60,16 @@ export default function Home() {
                 her loving family (including an overly-energetic furry friend, Douglas).
               </p>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 md:gap-4">
               <Link
                 href="/contact"
-                className="inline-block bg-foreground text-white text-sm uppercase tracking-wider px-8 py-3 hover:bg-foreground/90 transition-colors"
+                className="inline-block bg-foreground text-white text-xs md:text-sm uppercase tracking-wider px-6 md:px-8 py-2.5 md:py-3 hover:bg-foreground/90 transition-colors"
               >
                 Get in Touch
               </Link>
               <Link
                 href="/gallery"
-                className="inline-block border border-foreground text-foreground text-sm uppercase tracking-wider px-8 py-3 hover:bg-foreground hover:text-white transition-colors"
+                className="inline-block border border-foreground text-foreground text-xs md:text-sm uppercase tracking-wider px-6 md:px-8 py-2.5 md:py-3 hover:bg-foreground hover:text-white transition-colors"
               >
                 View Gallery
               </Link>

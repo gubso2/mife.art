@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 md:py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -25,7 +25,7 @@ export default function Header() {
             alt="Mifé Art"
             width={300}
             height={200}
-            className="h-28 w-auto"
+            className="h-16 md:h-28 w-auto"
             priority
           />
         </Link>
@@ -76,12 +76,12 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <nav className="md:hidden border-t border-border px-6 py-4 bg-white">
+        <nav className="md:hidden border-t border-border px-4 py-2 bg-white">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="block py-3 text-sm uppercase tracking-wider text-muted hover:text-foreground transition-colors"
+              className="block py-3 text-base uppercase tracking-wider text-muted hover:text-foreground transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}

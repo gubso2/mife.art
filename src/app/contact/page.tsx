@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
         <div>
           <h1 className="text-2xl md:text-3xl font-semibold uppercase tracking-wider mb-6">
             Contact
@@ -24,7 +24,7 @@ export default function ContactPage() {
         </div>
 
         <div className="flex flex-col justify-center">
-          <div className="bg-gray-50 p-8 md:p-12 space-y-6">
+          <div className="bg-gray-50 p-6 md:p-8 lg:p-12 space-y-6">
             <div>
               <h3 className="text-xs uppercase tracking-wider font-semibold mb-2">Email</h3>
               <a

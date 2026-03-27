@@ -32,7 +32,7 @@ export default function ShopFilter({ artworks }: { artworks: Artwork[] }) {
 
   return (
     <>
-      <div className="flex flex-wrap items-center gap-4 mb-10">
+      <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-6 md:mb-10">
         {/* Sold filter */}
         <div className="flex items-center gap-2">
           <span className="text-xs uppercase tracking-wider text-muted">Show:</span>
@@ -41,7 +41,7 @@ export default function ShopFilter({ artworks }: { artworks: Artwork[] }) {
               <button
                 key={option}
                 onClick={() => setSoldFilter(option)}
-                className={`px-3 py-1.5 text-xs uppercase tracking-wider border transition-colors ${
+                className={`px-3 py-2.5 md:py-1.5 text-xs uppercase tracking-wider border transition-colors ${
                   soldFilter === option
                     ? "bg-foreground text-white border-foreground"
                     : "bg-white text-muted border-border hover:border-foreground"
@@ -59,7 +59,7 @@ export default function ShopFilter({ artworks }: { artworks: Artwork[] }) {
           <select
             value={priceSort}
             onChange={(e) => setPriceSort(e.target.value as PriceSort)}
-            className="border border-border px-3 py-1.5 text-xs uppercase tracking-wider bg-white text-foreground focus:outline-none focus:border-foreground"
+            className="border border-border px-3 py-2.5 md:py-1.5 text-xs uppercase tracking-wider bg-white text-foreground focus:outline-none focus:border-foreground"
           >
             <option value="default">Default</option>
             <option value="low-high">Low to High</option>

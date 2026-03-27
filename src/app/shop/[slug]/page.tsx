@@ -38,10 +38,10 @@ export default async function ArtworkPage({
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
+    <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-20">
       <Link
         href="/shop"
-        className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors mb-8"
+        className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors mb-6 md:mb-8"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
@@ -49,7 +49,7 @@ export default async function ArtworkPage({
         Back to Shop
       </Link>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
         {/* Image */}
         <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
           <Image
