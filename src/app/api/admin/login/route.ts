@@ -3,8 +3,16 @@ import { cookies } from "next/headers";
 
 export async function POST(req: NextRequest) {
   const { password } = await req.json();
+  const adminPassword = (process.env.ADMIN_PASSWORD || "").trim();
 
-  if (password !== process.env.ADMIN_PASSWORD) {
+  if (!adminPassword) {
+    return NextResponse.json(
+      { error: "Admin password not configured. Set ADMIN_PASSWORD in Vercel environment variables." },
+      { status: 500 }
+    );
+  }
+
+  if (password.trim() !== adminPassword) {
     return NextResponse.json({ error: "Invalid password" }, { status: 401 });
   }
 
