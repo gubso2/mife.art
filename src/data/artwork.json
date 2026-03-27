@@ -161,7 +161,7 @@
     "year": 2025,
     "price": 450,
     "currency": "AUD",
-    "sold": true,
+    "sold": false,
     "featured": false,
     "images": ["12 far.jpg"],
     "closeImage": "12 close.jpg",
