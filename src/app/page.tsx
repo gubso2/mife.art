@@ -18,16 +18,24 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-xl md:text-2xl font-semibold uppercase tracking-wider">
-            Available Work
+            Featured
           </h2>
           <Link
             href="/shop"
-            className="text-sm uppercase tracking-wider text-muted hover:text-foreground transition-colors"
+            className="bg-foreground text-white text-sm uppercase tracking-wider px-6 py-2.5 hover:bg-foreground/90 transition-colors"
           >
             View All
           </Link>
         </div>
-        <ArtworkGrid artworks={featured} />
+        <ArtworkGrid artworks={featured.slice(0, 6)} />
+        <div className="mt-12 text-center">
+          <Link
+            href="/shop"
+            className="inline-block bg-foreground text-white text-sm uppercase tracking-wider px-8 py-3 hover:bg-foreground/90 transition-colors"
+          >
+            View All Work
+          </Link>
+        </div>
       </section>
 
       {/* About the Artist */}
