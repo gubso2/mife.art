@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ArtworkGrid from "@/components/ArtworkGrid";
+import ShopFilter from "@/components/ShopFilter";
 import artworkData from "@/data/artwork.json";
 import type { Artwork } from "@/lib/types";
 
@@ -16,8 +16,6 @@ export default async function ShopPage({
   searchParams: Promise<{ success?: string }>;
 }) {
   const { success } = await searchParams;
-  // Sort: available first, then sold
-  const sorted = [...artworks].sort((a, b) => Number(a.sold) - Number(b.sold));
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
@@ -31,13 +29,7 @@ export default async function ShopPage({
         Shop
       </h1>
 
-      <ArtworkGrid artworks={sorted} />
-
-      {artworks.length === 0 && (
-        <p className="text-muted text-center py-20">
-          No artwork available at the moment. Check back soon.
-        </p>
-      )}
+      <ShopFilter artworks={artworks} />
     </div>
   );
 }
