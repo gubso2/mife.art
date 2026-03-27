@@ -8,7 +8,7 @@ import type { Artwork } from "@/lib/types";
 const artworks = artworkData as Artwork[];
 
 export default function Home() {
-  const featured = artworks.filter((a) => a.featured && !a.sold);
+  const featured = artworks.filter((a) => a.featured);
 
   return (
     <>
@@ -60,12 +60,20 @@ export default function Home() {
                 her loving family (including an overly-energetic furry friend, Douglas).
               </p>
             </div>
-            <Link
-              href="/contact"
-              className="inline-block bg-foreground text-white text-sm uppercase tracking-wider px-8 py-3 hover:bg-foreground/90 transition-colors"
-            >
-              Get in Touch
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="inline-block bg-foreground text-white text-sm uppercase tracking-wider px-8 py-3 hover:bg-foreground/90 transition-colors"
+              >
+                Get in Touch
+              </Link>
+              <Link
+                href="/gallery"
+                className="inline-block border border-foreground text-foreground text-sm uppercase tracking-wider px-8 py-3 hover:bg-foreground hover:text-white transition-colors"
+              >
+                View Gallery
+              </Link>
+            </div>
           </div>
           <div className="w-full max-w-xs mx-auto relative">
             <div className="absolute -inset-3 bg-gradient-to-br from-pink-200 via-amber-100 to-teal-200 rounded-[1.5rem] rotate-1 opacity-60" />

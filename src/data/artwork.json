@@ -36,7 +36,7 @@
     "price": 590,
     "currency": "AUD",
     "sold": false,
-    "featured": true,
+    "featured": false,
     "images": ["3 far.jpg"],
     "closeImage": "3 close.jpg",
     "description": "Deep cobalt blues and teals form the backdrop for luminous blue flowers with golden stems, evoking a lush midnight garden."
@@ -64,7 +64,7 @@
     "price": 690,
     "currency": "AUD",
     "sold": true,
-    "featured": true,
+    "featured": false,
     "images": ["5 far.jpg"],
     "closeImage": "5 close.jpg",
     "description": "Delicate white jasmine flowers and olive-green leaves drift across a bright sky-blue background, fresh and full of light."
@@ -176,7 +176,7 @@
     "price": 590,
     "currency": "AUD",
     "sold": false,
-    "featured": true,
+    "featured": false,
     "images": ["13 far.jpg"],
     "closeImage": "13 close.jpg",
     "description": "Bold white daisies bloom against a warm sunset palette of pinks, oranges and deep blues, with flowing pink tendrils connecting the composition."
@@ -204,7 +204,7 @@
     "price": 850,
     "currency": "AUD",
     "sold": false,
-    "featured": false,
+    "featured": true,
     "images": ["15 far.JPG"],
     "closeImage": "15 close.jpeg",
     "description": "A vibrant triptych of three panels featuring neon orange gestural marks over a minty aqua ground with pops of yellow and blue."
@@ -232,7 +232,7 @@
     "price": 490,
     "currency": "AUD",
     "sold": false,
-    "featured": true,
+    "featured": false,
     "images": ["17 far.jpg"],
     "closeImage": "17 close.JPG",
     "description": "Soft pinks, peaches and yellows blossom across a dusky blue ground, with playful looping lines giving the flowers a sense of weightless movement."
@@ -246,7 +246,7 @@
     "price": 550,
     "currency": "AUD",
     "sold": false,
-    "featured": true,
+    "featured": false,
     "images": ["18 far.JPG"],
     "closeImage": "18 close.jpeg",
     "description": "Fiery reds, hot pinks and burnt oranges burst with floral forms against a golden yellow ground — bold, warm and unapologetically vibrant."
