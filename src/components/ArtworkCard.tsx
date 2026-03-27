@@ -31,7 +31,6 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Far image (default) */}
           <Image
             src={farSrc}
             alt={artwork.title}
@@ -41,7 +40,6 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
               closeSrc ? "group-hover:opacity-0" : ""
             } ${showClose ? "opacity-0" : ""}`}
           />
-          {/* Close image (on hover / swipe) */}
           {closeSrc && (
             <Image
               src={closeSrc}
@@ -58,7 +56,6 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
               Sold
             </div>
           )}
-          {/* Swipe indicator dots (mobile only) */}
           {closeSrc && (
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex gap-1.5 md:hidden">
               <div className={`w-1.5 h-1.5 rounded-full transition-colors ${!showClose ? "bg-white" : "bg-white/40"}`} />
@@ -66,49 +63,64 @@ export default function ArtworkCard({ artwork }: { artwork: Artwork }) {
             </div>
           )}
         </div>
-
-        <div className="mt-3 flex gap-3">
-          {/* Thumbnails */}
-          <div className="flex flex-col gap-1.5 shrink-0">
-            <div className="w-10 h-10 relative overflow-hidden bg-gray-100 border border-border">
-              <Image
-                src={farSrc}
-                alt="Room view"
-                fill
-                sizes="40px"
-                className="object-cover"
-              />
-            </div>
-            {closeSrc && (
-              <div className="w-10 h-10 relative overflow-hidden bg-gray-100 border border-border">
-                <Image
-                  src={closeSrc}
-                  alt="Detail view"
-                  fill
-                  sizes="40px"
-                  className="object-cover"
-                />
-              </div>
-            )}
-          </div>
-          {/* Info */}
-          <div className="space-y-1 min-w-0">
-            <h3 className="text-sm font-medium group-hover:underline">{artwork.title}</h3>
-            <p className="text-xs text-muted">{artwork.medium}</p>
-            {artwork.dimensions && <p className="text-xs text-muted">{artwork.dimensions}</p>}
-            {artwork.price > 0 && (
-              <p className="text-sm font-medium mt-1">
-                {artwork.sold ? (
-                  <span className="text-muted">Sold</span>
-                ) : (
-                  `$${artwork.price.toLocaleString()} ${artwork.currency}`
-                )}
-              </p>
-            )}
-          </div>
-        </div>
       </Link>
 
+      {/* Info + Thumbnails row */}
+      <div className="mt-3 flex items-start justify-between gap-2">
+        {/* Info (left) */}
+        <Link href={`/shop/${artwork.slug}`} className="space-y-1 min-w-0">
+          <h3 className="text-sm font-medium group-hover:underline">{artwork.title}</h3>
+          <p className="text-xs text-muted">{artwork.medium}</p>
+          {artwork.dimensions && <p className="text-xs text-muted">{artwork.dimensions}</p>}
+          {artwork.price > 0 && (
+            <p className="text-sm font-medium mt-1">
+              {artwork.sold ? (
+                <span className="text-muted">Sold</span>
+              ) : (
+                `$${artwork.price.toLocaleString()} ${artwork.currency}`
+              )}
+            </p>
+          )}
+        </Link>
+
+        {/* Thumbnails (right) */}
+        <div className="flex gap-1.5 shrink-0">
+          <button
+            type="button"
+            onClick={() => setShowClose(false)}
+            className={`w-12 h-12 relative overflow-hidden border-2 transition-colors ${
+              !showClose ? "border-foreground" : "border-border hover:border-foreground/50"
+            }`}
+          >
+            <Image
+              src={farSrc}
+              alt="Room view"
+              fill
+              sizes="48px"
+              className="object-cover"
+            />
+          </button>
+          {closeSrc && (
+            <button
+              type="button"
+              onClick={() => setShowClose(true)}
+              className={`w-12 h-12 relative overflow-hidden border-2 transition-colors ${
+                showClose ? "border-foreground" : "border-border hover:border-foreground/50"
+              }`}
+            >
+              <Image
+                src={closeSrc}
+                alt="Detail view"
+                fill
+                sizes="48px"
+                className="object-cover"
+              />
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Purchase / Sold button */}
       {artwork.sold ? (
         <div className="mt-3 w-full bg-gray-200 text-muted text-xs uppercase tracking-wider px-4 py-2.5 text-center">
           Sold
