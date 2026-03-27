@@ -51,7 +51,7 @@ export default function Home() {
           </div>
           <div className="flex-1 w-full relative">
             <div className="absolute -inset-3 bg-gradient-to-br from-pink-200 via-amber-100 to-teal-200 rounded-[1.5rem] rotate-1 opacity-60" />
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[1rem] rotate-[-0.5deg] shadow-lg">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-[1rem] rotate-[-0.5deg] shadow-lg">
               <Image
                 src="/Mife Artist Photo.jpeg"
                 alt="Marina Ensor"
