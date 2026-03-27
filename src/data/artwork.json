@@ -246,8 +246,8 @@
     "currency": "AUD",
     "sold": false,
     "featured": true,
-    "images": ["18 far.jpeg"],
-    "closeImage": "18 close.JPG",
+    "images": ["18 far.JPG"],
+    "closeImage": "18 close.jpeg",
     "description": "Fiery reds, hot pinks and burnt oranges burst with floral forms against a golden yellow ground — bold, warm and unapologetically vibrant."
   }
 ]
