@@ -3,16 +3,16 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative">
-      {/* Background - full width image, not cropped */}
+    <section className="relative overflow-hidden max-h-[500px]">
+      {/* Background image */}
       <img
         src="/hero-banner.png"
         alt=""
-        className="absolute inset-0 w-full h-full object-fill"
+        className="w-full h-auto block"
       />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-28 flex flex-col items-center text-center">
+      {/* Content overlay */}
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
         <Image
           src="/mife-logo.png"
           alt="Mifé Art"

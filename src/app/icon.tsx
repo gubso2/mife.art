@@ -1,9 +1,14 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
 export default function Icon() {
+  const logoData = readFileSync(join(process.cwd(), "public/mife-logo.png"));
+  const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -13,16 +18,10 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1c1c1c",
-          borderRadius: "12px",
-          color: "white",
-          fontSize: "42px",
-          fontWeight: 700,
-          fontFamily: "serif",
-          fontStyle: "italic",
+          background: "white",
         }}
       >
-        M
+        <img src={logoBase64} width={60} height={40} />
       </div>
     ),
     { ...size }
