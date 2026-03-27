@@ -23,9 +23,9 @@ export default function Header() {
           <Image
             src="/mife-logo.png"
             alt="Mifé Art"
-            width={150}
-            height={75}
-            className="h-14 w-auto"
+            width={300}
+            height={200}
+            className="h-28 w-auto"
             priority
           />
         </Link>
