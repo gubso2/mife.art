@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -10,9 +11,19 @@ export default function AboutPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Photo placeholder */}
-        <div className="aspect-[3/4] bg-gray-100 flex items-center justify-center text-muted text-sm">
-          Artist Photo
+        {/* Artist Photo */}
+        <div className="relative">
+          <div className="absolute -inset-4 bg-gradient-to-br from-pink-200 via-amber-100 to-teal-200 rounded-[2rem] rotate-2 opacity-60" />
+          <div className="relative aspect-[3/4] overflow-hidden rounded-[1.5rem] rotate-[-1deg] shadow-xl">
+            <Image
+              src="/Mife Artist Photo.jpeg"
+              alt="Marina Ensor"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
 
         {/* Bio */}

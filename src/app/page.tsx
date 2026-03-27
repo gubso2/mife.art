@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import ArtworkGrid from "@/components/ArtworkGrid";
 import artworkData from "@/data/artwork.json";
@@ -48,8 +49,17 @@ export default function Home() {
               Learn More
             </Link>
           </div>
-          <div className="flex-1 aspect-[4/3] bg-gray-200 w-full flex items-center justify-center text-muted text-sm">
-            Artist Photo
+          <div className="flex-1 w-full relative">
+            <div className="absolute -inset-3 bg-gradient-to-br from-pink-200 via-amber-100 to-teal-200 rounded-[1.5rem] rotate-1 opacity-60" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[1rem] rotate-[-0.5deg] shadow-lg">
+              <Image
+                src="/Mife Artist Photo.jpeg"
+                alt="Marina Ensor"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-top"
+              />
+            </div>
           </div>
         </div>
       </section>
