@@ -50,16 +50,29 @@ export default async function ArtworkPage({
       </Link>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-        {/* Image */}
-        <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
-          <Image
-            src={`/artwork/${artwork.images[0]}`}
-            alt={artwork.title}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-            priority
-          />
+        {/* Images */}
+        <div className="space-y-4">
+          <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
+            <Image
+              src={`/artwork/${artwork.images[0]}`}
+              alt={artwork.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+          {artwork.closeImage && (
+            <div className="aspect-square bg-gray-100 relative overflow-hidden">
+              <Image
+                src={`/artwork/${artwork.closeImage}`}
+                alt={`${artwork.title} — detail`}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          )}
         </div>
 
         {/* Details */}
