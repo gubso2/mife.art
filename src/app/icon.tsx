@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFileSync } from "fs";
 import { join } from "path";
 
-export const size = { width: 128, height: 128 };
+export const size = { width: 256, height: 256 };
 export const contentType = "image/png";
 
 export default function Icon() {
@@ -21,7 +21,7 @@ export default function Icon() {
           background: "white",
         }}
       >
-        <img src={logoBase64} width={124} height={83} />
+        <img src={logoBase64} width={250} height={167} />
       </div>
     ),
     { ...size }
